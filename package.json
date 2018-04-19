@@ -9,6 +9,9 @@
   "author": "John Crisostomo",
   "license": "MIT",
   "dependencies": {
-    "solc": "^0.4.22"
+    "ganache-cli": "^6.1.0",
+    "mocha": "^5.1.1",
+    "solc": "^0.4.22",
+    "web3": "^1.0.0-beta.26"
   }
 }
