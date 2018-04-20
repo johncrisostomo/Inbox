@@ -2,13 +2,13 @@ const HDWalletProvider = require('truffle-hdwallet-provider');
 const Web3 = require('web3');
 const { interface, bytecode } = require('./compile');
 
-const { accountMneumonic, infuraApiKey } = require('./settings.json');
+const { accountMnemonic, infuraApiKey } = require('./settings.json');
 
 const network = 'rinkeby';
 const INFURA_API_URI = `https://${network}.infura.io/${infuraApiKey}`
 
 const provider = new HDWalletProvider(
-    accountMneumonic,
+    accountMnemonic,
     INFURA_API_URI
 );
 
