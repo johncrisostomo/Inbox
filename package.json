@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "deploy": "node deploy.js",
     "test": "mocha"
   },
   "author": "John Crisostomo",
