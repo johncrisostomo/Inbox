@@ -11,6 +11,7 @@ let fetchedAccounts;
 let inbox;
 
 const INITIAL_STRING = 'Hello world!';
+const MODIFIED_STRING = 'Bye, world!';
 
 beforeEach(async () => {
     fetchedAccounts = await web3.eth.getAccounts();
@@ -33,4 +34,13 @@ describe('Inbox', () => {
         assert.equal(message, INITIAL_STRING);
     });
 
+    it('can change the message', async () => {
+        await inbox.methods.setMessage(MODIFIED_STRING)
+            .send({ from: fetchedAccounts[0] });
+        
+        const message = await inbox.methods.getMessage().call();
+
+        assert.equal(message, MODIFIED_STRING);
+    });
+    
 });
